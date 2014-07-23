@@ -1,3 +1,9 @@
+<?php
+
+require_once("functions/functions.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,10 +44,10 @@
         <div class="col-md-12 column">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="index.php?pages=empresa">Empresa</a></li>
-                <li><a href="index.php?pages=produtos">Produtos</a></li>
-                <li><a href="index.php?pages=servicos">Serviços</a></li>
-                <li><a href="index.php?pages=contato">Contato</a></li>
+                <li><a href="empresa">Empresa</a></li>
+                <li><a href="produtos">Produtos</a></li>
+                <li><a href="servicos">Serviços</a></li>
+                <li><a href="contato">Contato</a></li>
             </ul>
         </div>
     </div>
