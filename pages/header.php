@@ -1,6 +1,7 @@
 <?php
 
 require_once("functions/functions.php");
+require_once("functions/database.php");
 
 ?>
 
@@ -43,7 +44,7 @@ require_once("functions/functions.php");
     <div class="row clearfix">
         <div class="col-md-12 column">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="index.php">Home</a></li>
+                <li class="active"><a href="home">Home</a></li>
                 <li><a href="empresa">Empresa</a></li>
                 <li><a href="produtos">Produtos</a></li>
                 <li><a href="servicos">Serviços</a></li>
