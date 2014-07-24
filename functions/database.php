@@ -17,7 +17,7 @@ function conectarDB() {
     return $conexao;
 }
 
-// Buscar Dados no Banco de Dados ------------------------ //
+// Resgatar Dados no Banco de Dados ------------------------ //
 function getDados($pagina) {
     $conexao = conectarDB();
 
@@ -33,7 +33,20 @@ function getDados($pagina) {
     return $dados;
 }
 
+//  Buscar Dados no Banco de Dados ------------------------ //
+/*function searchDados() {
+    $conexao = conectarDB();
 
+    try {
+        $busca = $conexao->prepare("Select * from paginas");
+        $busca->execute();
+        $dados = $busca->fetchAll(PDO::FETCH_ASSOC);
+    }
+    catch (\PDOException $e) {
+        echo "Não foi possível estabelecer uma conexão com o banco de dados.<br>Código do Erro: ".$e->getCode()."<br> Mensagem: ".$e->getMessage();
+    }
+    return $dados;
+}*/
 
 // Cadastrar Dados no Banco de Dados ------------------------ //
 function cadastrarDados() {

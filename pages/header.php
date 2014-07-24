@@ -1,7 +1,8 @@
 <?php
 
-require_once("functions/functions.php");
+require_once("functions/rota.php");
 require_once("functions/database.php");
+require_once("functions/busca.php");
 
 ?>
 
@@ -40,15 +41,26 @@ require_once("functions/database.php");
 </head>
 
 <body>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="home">Home</a></li>
-                <li><a href="empresa">Empresa</a></li>
-                <li><a href="produtos">Produtos</a></li>
-                <li><a href="servicos">Serviços</a></li>
-                <li><a href="contato">Contato</a></li>
-            </ul>
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="home">Home</a></li>
+                            <li><a href="empresa">Empresa</a></li>
+                            <li><a href="produtos">Produtos</a></li>
+                            <li><a href="servicos">Serviços</a></li>
+                            <li><a href="contato">Contato</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search" method="post" action="busca">
+                            <div class="form-group">
+                                <input type="text" name="keyword" class="form-control" required="true" placeholder="pesquise aqui" />
+                            </div>
+                            <input type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
         </div>
-    </div>

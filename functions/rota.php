@@ -13,10 +13,9 @@ function getURL() {
     elseif (in_array($path_str, $rotasValidas)) {
         ///require_once("pages/" . $path_str . ".php");
         return $dados = getDados($path_str);
+    } elseif ($path_str=='busca' and isset($_POST['keyword'])) {
+        require_once("pages/busca.php");
     } else {
         require_once("pages/404.php");
     }
 }
-
-/*$teste = getURL();
-print_r($teste);*/
