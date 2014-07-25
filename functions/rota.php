@@ -5,7 +5,7 @@ function getURL() {
     $path = $rota['path'];
     $path = explode("/",$path);
     $path_str = $path[1];
-    $rotasValidas = ['home','empresa','produtos','servicos','contato'];
+    $rotasValidas = ['home','empresa','produtos','servicos'];
 
     if (empty($path_str)) {
         return $dados = getDados('home');
@@ -15,7 +15,10 @@ function getURL() {
         return $dados = getDados($path_str);
     } elseif ($path_str=='busca' and isset($_POST['keyword'])) {
         require_once("pages/busca.php");
-    } else {
+    } elseif ($path_str=="contato") {
+        require_once("pages/contato.php");
+    }
+    else {
         require_once("pages/404.php");
     }
 }
