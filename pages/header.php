@@ -41,26 +41,33 @@ require_once("functions/busca.php");
 </head>
 
 <body>
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+                        </div>
 
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-md-12 column">
-                <nav class="navbar navbar-inverse" role="navigation">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="home">Home</a></li>
-                            <li><a href="empresa">Empresa</a></li>
-                            <li><a href="produtos">Produtos</a></li>
-                            <li><a href="servicos">Serviços</a></li>
-                            <li><a href="contato">Contato</a></li>
-                        </ul>
-                        <form class="navbar-form navbar-left" role="search" method="post" action="busca">
-                            <div class="form-group">
-                                <input type="text" name="keyword" class="form-control" required="true" placeholder="pesquise aqui" />
-                            </div>
-                            <input type="submit" class="btn btn-default">Submit</button>
-                        </form>
-                    </div>
-                </nav>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="home">Home</a></li>
+                                <li><a href="empresa">Empresa</a></li>
+                                <li><a href="produtos">Produtos</a></li>
+                                <li><a href="servicos">Serviços</a></li>
+                                <li><a href="contato">Contato</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/admin/">Área Restrita</a></li>
+                            </ul>
+
+                            <form class="navbar-form navbar-right" role="search" method="post" action="busca">
+                                <div class="form-group">
+                                    <input type="text" name="keyword" class="form-control" required="true" placeholder="Pesquisa"/>
+                                </div>
+                                <input type="submit" class="btn btn-default" />
+                            </form>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </div>
